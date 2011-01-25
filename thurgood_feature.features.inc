@@ -469,6 +469,7 @@ function thurgood_feature_imagecache_default_presets() {
     ),
   );
   return $items;
+}
 
 /**
  * Implementation of hook_views_api().
