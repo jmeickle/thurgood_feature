@@ -11,7 +11,7 @@ function thurgood_feature_fieldgroup_default_groups() {
     'group_type' => 'standard',
     'type_name' => 'article',
     'group_name' => 'group_contact',
-    'label' => 'Contact',
+    'label' => 'Contact info',
     'settings' => array(
       'form' => array(
         'style' => 'fieldset',
@@ -193,7 +193,7 @@ function thurgood_feature_fieldgroup_default_groups() {
     ),
     'weight' => '-2',
     'fields' => array(
-      '0' => 'field_noderef_mentions',
+      '0' => 'field_noderef_mention',
     ),
   );
 
@@ -344,7 +344,7 @@ function thurgood_feature_fieldgroup_default_groups() {
     'group_type' => 'standard',
     'type_name' => 'event',
     'group_name' => 'group_contact',
-    'label' => 'Contact',
+    'label' => 'Contact info',
     'settings' => array(
       'form' => array(
         'style' => 'fieldset',
@@ -731,7 +731,7 @@ function thurgood_feature_fieldgroup_default_groups() {
     'group_type' => 'standard',
     'type_name' => 'organization',
     'group_name' => 'group_contact',
-    'label' => 'Contact',
+    'label' => 'Contact info',
     'settings' => array(
       'form' => array(
         'style' => 'fieldset',
@@ -1071,7 +1071,7 @@ function thurgood_feature_fieldgroup_default_groups() {
     'group_type' => 'standard',
     'type_name' => 'person',
     'group_name' => 'group_contact',
-    'label' => 'Contact',
+    'label' => 'Contact info',
     'settings' => array(
       'form' => array(
         'style' => 'fieldset',
@@ -1411,7 +1411,7 @@ function thurgood_feature_fieldgroup_default_groups() {
     'group_type' => 'standard',
     'type_name' => 'place',
     'group_name' => 'group_contact',
-    'label' => 'Contact',
+    'label' => 'Contact info',
     'settings' => array(
       'form' => array(
         'style' => 'fieldset',
@@ -1750,7 +1750,7 @@ function thurgood_feature_fieldgroup_default_groups() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Connections');
-  t('Contact');
+  t('Contact info');
   t('Date');
   t('Documents');
   t('Files');

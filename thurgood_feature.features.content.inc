@@ -256,9 +256,9 @@ function thurgood_feature_content_default_fields() {
     ),
   );
 
-  // Exported field: field_noderef_mentions
-  $fields['article-field_noderef_mentions'] = array(
-    'field_name' => 'field_noderef_mentions',
+  // Exported field: field_noderef_mention
+  $fields['article-field_noderef_mention'] = array(
+    'field_name' => 'field_noderef_mention',
     'type_name' => 'article',
     'display_settings' => array(
       'weight' => '49',
@@ -312,11 +312,11 @@ function thurgood_feature_content_default_fields() {
       'default_value' => array(
         '0' => array(
           'nid' => NULL,
-          '_error_element' => 'default_value_widget][field_noderef_mentions][0][nid][nid',
+          '_error_element' => 'default_value_widget][field_noderef_mention][0][nid][nid',
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Mentions',
+      'label' => 'Mention',
       'weight' => '49',
       'description' => '',
       'type' => 'nodereference_autocomplete',
@@ -1485,7 +1485,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'field_name' => 'field_noderef_place',
     'type_name' => 'event',
     'display_settings' => array(
-      'weight' => '20',
+      'weight' => '21',
       'parent' => 'group_location',
       'label' => array(
         'format' => 'above',
@@ -1541,7 +1541,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Place',
-      'weight' => '20',
+      'weight' => '21',
       'description' => '',
       'type' => 'nrembrowser_browser',
       'module' => 'nrembrowser',
@@ -1736,7 +1736,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'field_name' => 'field_toggle_location',
     'type_name' => 'event',
     'display_settings' => array(
-      'weight' => '21',
+      'weight' => '20',
       'parent' => 'group_location',
       'label' => array(
         'format' => 'above',
@@ -1787,7 +1787,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Toggle location entry',
-      'weight' => '21',
+      'weight' => '20',
       'description' => '',
       'type' => 'optionwidgets_buttons',
       'module' => 'optionwidgets',
@@ -2695,7 +2695,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'field_name' => 'field_noderef_place',
     'type_name' => 'organization',
     'display_settings' => array(
-      'weight' => '17',
+      'weight' => '18',
       'parent' => 'group_location',
       'label' => array(
         'format' => 'above',
@@ -2751,7 +2751,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Place',
-      'weight' => '17',
+      'weight' => '18',
       'description' => '',
       'type' => 'nrembrowser_browser',
       'module' => 'nrembrowser',
@@ -2946,7 +2946,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'field_name' => 'field_toggle_location',
     'type_name' => 'organization',
     'display_settings' => array(
-      'weight' => '18',
+      'weight' => '17',
       'parent' => 'group_location',
       'label' => array(
         'format' => 'above',
@@ -2997,7 +2997,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Toggle location entry',
-      'weight' => '18',
+      'weight' => '17',
       'description' => '',
       'type' => 'optionwidgets_buttons',
       'module' => 'optionwidgets',
@@ -3905,7 +3905,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'field_name' => 'field_noderef_place',
     'type_name' => 'person',
     'display_settings' => array(
-      'weight' => '17',
+      'weight' => '18',
       'parent' => 'group_location',
       'label' => array(
         'format' => 'above',
@@ -3961,7 +3961,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Place',
-      'weight' => '17',
+      'weight' => '18',
       'description' => '',
       'type' => 'nrembrowser_browser',
       'module' => 'nrembrowser',
@@ -4156,7 +4156,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'field_name' => 'field_toggle_location',
     'type_name' => 'person',
     'display_settings' => array(
-      'weight' => '18',
+      'weight' => '17',
       'parent' => 'group_location',
       'label' => array(
         'format' => 'above',
@@ -4207,7 +4207,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Toggle location entry',
-      'weight' => '18',
+      'weight' => '17',
       'description' => '',
       'type' => 'optionwidgets_buttons',
       'module' => 'optionwidgets',
@@ -5716,7 +5716,7 @@ Sometimes, it\'s not clear whether a <em><b>Place</b></em> \'truly belongs\' wit
   t('Email address');
   t('Image');
   t('Location');
-  t('Mentions');
+  t('Mention');
   t('Notes');
   t('Operating hours');
   t('Phone number');

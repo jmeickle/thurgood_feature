@@ -1280,18 +1280,18 @@ function thurgood_feature_views_default_views() {
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
-    'field_noderef_mentions_nid' => array(
+    'field_noderef_mention_nid' => array(
       'label' => 'Mentions',
       'required' => 0,
       'delta' => '-1',
-      'id' => 'field_noderef_mentions_nid',
-      'table' => 'node_data_field_noderef_mentions',
-      'field' => 'field_noderef_mentions_nid',
+      'id' => 'field_noderef_mention_nid',
+      'table' => 'node_data_field_noderef_mention',
+      'field' => 'field_noderef_mention_nid',
       'relationship' => 'none',
     ),
   ));
   $handler->override_option('fields', array(
-    'field_noderef_mentions_nid' => array(
+    'field_noderef_mention_nid' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -1324,9 +1324,9 @@ function thurgood_feature_views_default_views() {
         'multiple_reversed' => 0,
       ),
       'exclude' => 0,
-      'id' => 'field_noderef_mentions_nid',
-      'table' => 'node_data_field_noderef_mentions',
-      'field' => 'field_noderef_mentions_nid',
+      'id' => 'field_noderef_mention_nid',
+      'table' => 'node_data_field_noderef_mention',
+      'field' => 'field_noderef_mention_nid',
       'relationship' => 'none',
     ),
     'type' => array(
@@ -1358,14 +1358,14 @@ function thurgood_feature_views_default_views() {
       'id' => 'type',
       'table' => 'node',
       'field' => 'type',
-      'relationship' => 'field_noderef_mentions_nid',
+      'relationship' => 'field_noderef_mention_nid',
     ),
   ));
   $handler->override_option('sorts', array(
     'delta' => array(
       'order' => 'ASC',
       'id' => 'delta',
-      'table' => 'node_data_field_noderef_mentions',
+      'table' => 'node_data_field_noderef_mention',
       'field' => 'delta',
       'relationship' => 'none',
     ),
@@ -1428,7 +1428,7 @@ function thurgood_feature_views_default_views() {
     ),
   ));
   $handler->override_option('filters', array(
-    'field_noderef_mentions_nid' => array(
+    'field_noderef_mention_nid' => array(
       'operator' => 'not empty',
       'value' => array(),
       'group' => '0',
@@ -1437,9 +1437,9 @@ function thurgood_feature_views_default_views() {
         'operator' => FALSE,
         'label' => '',
       ),
-      'id' => 'field_noderef_mentions_nid',
-      'table' => 'node_data_field_noderef_mentions',
-      'field' => 'field_noderef_mentions_nid',
+      'id' => 'field_noderef_mention_nid',
+      'table' => 'node_data_field_noderef_mention',
+      'field' => 'field_noderef_mention_nid',
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
