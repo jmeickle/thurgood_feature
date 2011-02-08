@@ -440,7 +440,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '45',
-      'description' => 'If your <em>Article</em> focuses on specific neighborhoods or cities, you can list that here.
+      'description' => 'If your Article focuses on specific neighborhoods or cities, you can list that here.
 
 
 
@@ -1003,7 +1003,7 @@ function thurgood_feature_content_default_fields() {
       'autocompletion_field_location_additional_type' => 'input',
       'label' => 'Location',
       'weight' => '22',
-      'description' => 'As you type your <em>Event</em>\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
+      'description' => 'As you type your Event\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
       'type' => 'openlayers_geocoder_widget',
@@ -1664,7 +1664,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '9',
-      'description' => 'If your <em>Event</em> has ties to a neighborhood or city, you may indicate that by listing a region.',
+      'description' => 'If your Event has ties to a neighborhood or city, you may indicate that by listing a region.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -1776,7 +1776,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'suffix' => '',
     'min' => '',
     'max' => '',
-    'allowed_values' => '0|Use the location of an existing <em>Place</em>
+    'allowed_values' => '0|Use the location of an existing Place
 1|Show me the form to add a new location',
     'allowed_values_php' => '',
     'widget' => array(
@@ -2213,7 +2213,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'autocompletion_field_location_additional_type' => 'input',
       'label' => 'Location',
       'weight' => '19',
-      'description' => 'As you type your <em>Event</em>\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
+      'description' => 'As you type your Event\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
       'type' => 'openlayers_geocoder_widget',
@@ -2874,7 +2874,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '11',
-      'description' => 'If your <em>Event</em> has ties to a neighborhood or city, you may indicate that by listing a region.',
+      'description' => 'If your Event has ties to a neighborhood or city, you may indicate that by listing a region.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -2986,7 +2986,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'suffix' => '',
     'min' => '',
     'max' => '',
-    'allowed_values' => '0|Use the location of an existing <em>Place</em>
+    'allowed_values' => '0|Use the location of an existing Place
 1|Show me the form to add a new location',
     'allowed_values_php' => '',
     'widget' => array(
@@ -3423,7 +3423,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'autocompletion_field_location_additional_type' => 'input',
       'label' => 'Location',
       'weight' => '19',
-      'description' => 'As you type your <em>Event</em>\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
+      'description' => 'As you type your Event\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
       'type' => 'openlayers_geocoder_widget',
@@ -4084,7 +4084,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '63',
-      'description' => 'If your <em>Event</em> has ties to a neighborhood or city, you may indicate that by listing a region.',
+      'description' => 'If your Event has ties to a neighborhood or city, you may indicate that by listing a region.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -4196,7 +4196,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
     'suffix' => '',
     'min' => '',
     'max' => '',
-    'allowed_values' => '0|Use the location of an existing <em>Place</em>
+    'allowed_values' => '0|Use the location of an existing Place
 1|Show me the form to add a new location',
     'allowed_values_php' => '',
     'widget' => array(
@@ -4697,7 +4697,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'autocompletion_field_location_additional_type' => 'input',
       'label' => 'Location',
       'weight' => '25',
-      'description' => 'As you type your <em><b>Place</b></em>\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
+      'description' => 'As you type your Place\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
       'type' => 'openlayers_geocoder_widget',
@@ -5353,7 +5353,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Special populations',
       'weight' => '21',
-      'description' => 'If your <em><b>Place</b></em> has an emphasis on the needs of a particular population, you may indicate that here. This can help users with specific needs find what they\'re looking for more easily.
+      'description' => 'If your Place has an emphasis on the needs of a particular population, you may indicate that here. This can help users with specific needs find what they\'re looking for more easily.
 
 Note that this is not the same thing as an eligibility restriction. For example, a service can focus on the needs of women without turning away men.',
       'type' => 'content_taxonomy_hs',
@@ -5416,11 +5416,11 @@ Note that this is not the same thing as an eligibility restriction. For example,
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '24',
-      'description' => 'If your <em><b>Place</b></em> has strong local ties, you may indicate that by listing a region. Listing an address tells users where your <em><b>Place</b></em> is located, but listing a region tells them where it calls home.
+      'description' => 'If your Place has strong local ties, you may indicate that by listing a region. Listing an address tells users where your Place is located, but listing a region tells them where it calls home.
 
-You can associate a <em><b>Place</b></em> with multiple neighborhoods or cities. However, listing a region is optional because not every <em><b>Place</b></em> has a local focus. A community garden is associated with a neighborhood, but a hospital serves the whole city, and a court building might see cases from an entire county.
+You can associate a Place with multiple neighborhoods or cities. However, listing a region is optional because not every Place has a local focus. A community garden is associated with a neighborhood, but a hospital serves the whole city, and a court building might see cases from an entire county.
 
-Regions are only used to help users limit their searches to local content. Users will always be able to see your <em><b>Place</b></em> on the map, even if you haven\'t associated it with a region.
+Regions are only used to help users limit their searches to local content. Users will always be able to see your Place on the map, even if you haven\'t associated it with a region.
 
 
 
@@ -5488,7 +5488,7 @@ Regions are only used to help users limit their searches to local content. Users
       'weight' => '20',
       'description' => 'Services are divided into broad categories, and many of those categories include narrower subcategories. Adding a subcategory is optional, but users are able to use them as filters when searching. This can help users find information more quickly when they have specific needs.
 
-Sometimes, it\'s not clear whether a <em><b>Place</b></em> \'truly belongs\' within a service category or subcategory. If you\'re uncertain, err on the side of selecting it, but add a note to the <em><b>Place</b></em>\'s description explaining why it might be inaccurate. (You will not lose your progress if you switch tabs to edit an earlier section.)',
+Sometimes, it\'s not clear whether a Place \'truly belongs\' within a service category or subcategory. If you\'re uncertain, err on the side of selecting it, but add a note to the Place\'s description explaining why it might be inaccurate. (You will not lose your progress if you switch tabs to edit an earlier section.)',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
