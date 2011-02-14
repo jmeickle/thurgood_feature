@@ -573,8 +573,8 @@ function thurgood_feature_fieldgroup_default_groups() {
     ),
     'weight' => '-1',
     'fields' => array(
-      '0' => 'field_noderef_place',
-      '1' => 'field_toggle_location',
+      '0' => 'field_toggle_location',
+      '1' => 'field_noderef_place',
       '2' => 'field_location',
       '3' => 'field_location_address',
       '4' => 'field_location_additional',
@@ -913,8 +913,8 @@ function thurgood_feature_fieldgroup_default_groups() {
     ),
     'weight' => '-2',
     'fields' => array(
-      '0' => 'field_noderef_place',
-      '1' => 'field_toggle_location',
+      '0' => 'field_toggle_location',
+      '1' => 'field_noderef_place',
       '2' => 'field_location',
       '3' => 'field_location_address',
       '4' => 'field_location_additional',
@@ -1253,8 +1253,8 @@ function thurgood_feature_fieldgroup_default_groups() {
     ),
     'weight' => '-2',
     'fields' => array(
-      '0' => 'field_noderef_place',
-      '1' => 'field_toggle_location',
+      '0' => 'field_toggle_location',
+      '1' => 'field_noderef_place',
       '2' => 'field_location',
       '3' => 'field_location_address',
       '4' => 'field_location_additional',

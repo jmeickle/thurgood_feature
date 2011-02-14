@@ -440,11 +440,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '45',
-      'description' => 'If your Article focuses on specific neighborhoods or cities, you can list that here.
-
-
-
-',
+      'description' => 'If your Article focuses on specific neighborhoods or cities, you can list that here.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -4084,7 +4080,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '63',
-      'description' => 'If your Event has ties to a neighborhood or city, you may indicate that by listing a region.',
+      'description' => 'If your <em>Event</em> has ties to a neighborhood or city, you may indicate that by listing a region.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -5353,7 +5349,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Special populations',
       'weight' => '21',
-      'description' => 'If your Place has an emphasis on the needs of a particular population, you may indicate that here. This can help users with specific needs find what they\'re looking for more easily.
+      'description' => 'If your <em><b>Place</b></em> has an emphasis on the needs of a particular population, you may indicate that here. This can help users with specific needs find what they\'re looking for more easily.
 
 Note that this is not the same thing as an eligibility restriction. For example, a service can focus on the needs of women without turning away men.',
       'type' => 'content_taxonomy_hs',

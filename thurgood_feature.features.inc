@@ -11,9 +11,66 @@ function thurgood_feature_ctools_plugin_api() {
   elseif ($module == "openlayers" && $api == "openlayers_presets") {
     return array("version" => 1);
   }
+  elseif ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => 1);
+  }
   elseif ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }
+}
+
+/**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function thurgood_feature_imagecache_default_presets() {
+  $items = array(
+    'content_body' => array(
+      'presetname' => 'content_body',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '640',
+            'height' => '480',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+    'large_thumb' => array(
+      'presetname' => 'large_thumb',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '180',
+            'height' => '135',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+    'small_thumb' => array(
+      'presetname' => 'small_thumb',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '64',
+            'height' => '64',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
 }
 
 /**
@@ -24,7 +81,7 @@ function thurgood_feature_node_info() {
     'article' => array(
       'name' => t('Article'),
       'module' => 'features',
-      'description' => t('Articles are informative website content, such as a news item or a blog post.'),
+      'description' => t('An <i>Article</i> is a generic piece of website content, such as a news item or a blog post.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
@@ -35,7 +92,7 @@ function thurgood_feature_node_info() {
     'event' => array(
       'name' => t('Event'),
       'module' => 'features',
-      'description' => t('Events may be one-off gatherings or regularly scheduled meetings.'),
+      'description' => t('An <b>Event</b> can be a regular meeting or a one-off gathering.'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'has_body' => '1',
@@ -46,29 +103,29 @@ function thurgood_feature_node_info() {
     'organization' => array(
       'name' => t('Organization'),
       'module' => 'features',
-      'description' => t('The Organization content type lets you represent a group, company, or agency with a profile on the site.'),
+      'description' => t('Filler'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'has_body' => '1',
       'body_label' => t('Description'),
       'min_word_count' => '0',
-      'help' => '',
+      'help' => t('Filler'),
     ),
     'person' => array(
       'name' => t('Person'),
       'module' => 'features',
-      'description' => t('The Person content type lets you create a profile for yourself as a person.'),
+      'description' => t('Filler'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'has_body' => '1',
       'body_label' => t('Description'),
       'min_word_count' => '0',
-      'help' => '',
+      'help' => t('Filler'),
     ),
     'place' => array(
       'name' => t('Place'),
       'module' => 'features',
-      'description' => t('Places are physical locations, such as offices or churches.'),
+      'description' => t('A <b>Place</b> is a physical location, such as an office or a church.'),
       'has_title' => '1',
       'title_label' => t('Name'),
       'has_body' => '1',
@@ -86,6 +143,110 @@ function thurgood_feature_node_info() {
 function thurgood_feature_rules_defaults() {
   return array(
     'rules' => array(
+      'rules_assign_edit' => array(
+        '#type' => 'rule',
+        '#set' => 'event_user_update',
+        '#label' => 'Assign site editor to users who aren\'t pending confirmation.',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'thurgood',
+          'thurgood_feature' => 'thurgood_feature',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#settings' => array(
+              'roles' => array(
+                '0' => 4,
+                '1' => 10,
+              ),
+              'operation' => 'OR',
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+            ),
+            '#type' => 'condition',
+            '#name' => 'rules_condition_user_hasrole',
+            '#info' => array(
+              'label' => 'User has role(s)',
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'User',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#weight' => 0,
+            '#negate' => 1,
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Add user role',
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'User whos roles should be changed',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#name' => 'rules_action_user_addrole',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 5,
+                '1' => 11,
+              ),
+              '#argument map' => array(
+                'user' => 'user',
+              ),
+            ),
+            '#type' => 'action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
+      'rules_dashboard_redirect' => array(
+        '#type' => 'rule',
+        '#set' => 'event_user_login',
+        '#label' => 'Redirect users to the dashboard page on login',
+        '#active' => 1,
+        '#weight' => '0',
+        '#categories' => array(
+          '0' => 'thurgood',
+          'thurgood_feature' => 'thurgood_feature',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(),
+        '#actions' => array(
+          '0' => array(
+            '#type' => 'action',
+            '#settings' => array(
+              'path' => 'dashboard',
+              'query' => '',
+              'fragment' => '',
+              'force' => 0,
+              'immediate' => 0,
+            ),
+            '#name' => 'rules_action_drupal_goto',
+            '#info' => array(
+              'label' => 'Page redirect',
+              'module' => 'System',
+              'eval input' => array(
+                '0' => 'path',
+                '1' => 'query',
+                '2' => 'fragment',
+              ),
+            ),
+            '#weight' => 0,
+          ),
+        ),
+        '#version' => 6003,
+      ),
       'rules_thurgood_check_revisions' => array(
         '#type' => 'rule',
         '#set' => 'event_node_update',
@@ -415,60 +576,6 @@ function thurgood_feature_rules_defaults() {
       ),
     ),
   );
-}
-
-/**
- * Implementation of hook_imagecache_default_presets().
- */
-function thurgood_feature_imagecache_default_presets() {
-  $items = array(
-    'content_body' => array(
-      'presetname' => 'content_body',
-      'actions' => array(
-        '0' => array(
-          'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale',
-          'data' => array(
-            'width' => '640',
-            'height' => '480',
-            'upscale' => 0,
-          ),
-        ),
-      ),
-    ),
-    'large_thumb' => array(
-      'presetname' => 'large_thumb',
-      'actions' => array(
-        '0' => array(
-          'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale',
-          'data' => array(
-            'width' => '180',
-            'height' => '135',
-            'upscale' => 0,
-          ),
-        ),
-      ),
-    ),
-    'small_thumb' => array(
-      'presetname' => 'small_thumb',
-      'actions' => array(
-        '0' => array(
-          'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale',
-          'data' => array(
-            'width' => '64',
-            'height' => '64',
-            'upscale' => 0,
-          ),
-        ),
-      ),
-    ),
-  );
-  return $items;
 }
 
 /**
