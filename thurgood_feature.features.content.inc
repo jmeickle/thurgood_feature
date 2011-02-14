@@ -58,7 +58,9 @@ function thurgood_feature_content_default_fields() {
       'max_filesize_per_node' => '50M',
       'label' => 'Document',
       'weight' => '43',
-      'description' => '',
+      'description' => 'Choose a document or archive file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more documents by selecting "Add another item".',
       'type' => 'filefield_widget',
       'module' => 'filefield',
     ),
@@ -115,7 +117,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Email address',
       'weight' => '11',
-      'description' => '',
+      'description' => 'You may provide as many contact email addresses as needed by selecting "Add another item".',
       'type' => 'email_textfield',
       'module' => 'email',
     ),
@@ -182,7 +184,9 @@ function thurgood_feature_content_default_fields() {
       'use_default_image' => 0,
       'label' => 'Image',
       'weight' => '10',
-      'description' => '',
+      'description' => 'Choose an image file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more images by selecting "Add another item".',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
     ),
@@ -250,7 +254,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Contact person',
       'weight' => '9',
-      'description' => '',
+      'description' => 'As you type the name of a Person, the system will look for matches. Only site users that have made a public profile will be found.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -318,7 +322,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Mention',
       'weight' => '49',
-      'description' => '',
+      'description' => 'As you type a title, the system will look for matches. You can mention any Article, Event, or Place published on the site. However, only site users that have made a public profile as an Organization or a Person will be found.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -379,7 +383,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Phone number',
       'weight' => '10',
-      'description' => '',
+      'description' => 'You may provide as many contact phone numbers as needed by selecting "Add another item".',
       'type' => 'phone_textfield',
       'module' => 'phone',
     ),
@@ -501,7 +505,9 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Tags',
       'weight' => '47',
-      'description' => 'Use commas.',
+      'description' => 'Tagging allows site users the freedom to describe their world the way they see it. Tags can be added to any content on the site, and other users can search a tag to see all matching items.
+
+You can use commas to enter multiple tags.',
       'type' => 'content_taxonomy_autocomplete',
       'module' => 'content_taxonomy_autocomplete',
     ),
@@ -572,7 +578,9 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Website',
       'weight' => '12',
-      'description' => '',
+      'description' => 'Please describe the website that you\'re linking to.
+
+You may provide as many contact websites as needed by selecting "Add another item".',
       'type' => 'link',
       'module' => 'link',
     ),
@@ -651,7 +659,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Video',
       'weight' => '50',
-      'description' => '',
+      'description' => 'When embedding a video from YouTube, please use the video\'s web address (URL) rather than the embed code.',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
     ),
@@ -724,7 +732,11 @@ function thurgood_feature_content_default_fields() {
       'label_position' => 'above',
       'label' => 'Date',
       'weight' => '20',
-      'description' => '',
+      'description' => 'The "From" time is the date your Event starts at. It can be just a date, or include a time as well.
+
+The "To" date is optional and is for Events that have a defined end point.
+
+Click on the "Repeat" menu to see options for entering an Event that is held according to a regular schedule. This can save time if you have many similar Events. However, you may also create as many separate Events as you like - for example, if you will meet up at a different time or place on each occasion.',
       'type' => 'date_popup_repeat',
       'module' => 'date',
     ),
@@ -782,7 +794,9 @@ function thurgood_feature_content_default_fields() {
       'max_filesize_per_node' => '50M',
       'label' => 'Document',
       'weight' => '11',
-      'description' => '',
+      'description' => 'Choose a document or archive file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more documents by selecting "Add another item".',
       'type' => 'filefield_widget',
       'module' => 'filefield',
     ),
@@ -839,7 +853,7 @@ function thurgood_feature_content_default_fields() {
       'default_value_php' => NULL,
       'label' => 'Email address',
       'weight' => '14',
-      'description' => '',
+      'description' => 'You may provide as many contact email addresses as needed by selecting "Add another item".',
       'type' => 'email_textfield',
       'module' => 'email',
     ),
@@ -906,7 +920,9 @@ function thurgood_feature_content_default_fields() {
       'use_default_image' => 0,
       'label' => 'Image',
       'weight' => '44',
-      'description' => '',
+      'description' => 'Choose an image file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more images by selecting "Add another item".',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
     ),
@@ -1402,7 +1418,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'dialog_hide' => 'null',
       'label' => 'Connection',
       'weight' => '13',
-      'description' => 'Filler',
+      'description' => ' You can use this field to indicate that your Event is related to, located at, or hosted by an Organization or Place. As you type a title, the system will look for matches.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -1470,7 +1486,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Contact person',
       'weight' => '12',
-      'description' => '',
+      'description' => 'As you type the name of a Person, the system will look for matches. Only site users that have made a public profile will be found.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -1538,7 +1554,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Place',
       'weight' => '21',
-      'description' => '',
+      'description' => 'You can use this field to indicate that your Event is located at an existing Place. As you type its name, the system will look for matches.',
       'type' => 'nrembrowser_browser',
       'module' => 'nrembrowser',
     ),
@@ -1599,7 +1615,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Phone number',
       'weight' => '13',
-      'description' => '',
+      'description' => 'You may provide as many contact phone numbers as needed by selecting "Add another item".',
       'type' => 'phone_textfield',
       'module' => 'phone',
     ),
@@ -1721,7 +1737,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Tags',
       'weight' => '10',
-      'description' => 'Use commas.',
+      'description' => 'Tagging allows site users the freedom to describe their world the way they see it. Tags can be added to any content on the site, and other users can search a tag to see all matching items.
+
+You can use commas to enter multiple tags.',
       'type' => 'content_taxonomy_autocomplete',
       'module' => 'content_taxonomy_autocomplete',
     ),
@@ -1855,7 +1873,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Website',
       'weight' => '15',
-      'description' => '',
+      'description' => 'Please describe the website that you\'re linking to.
+
+You may provide as many contact websites as needed by selecting "Add another item".',
       'type' => 'link',
       'module' => 'link',
     ),
@@ -1934,7 +1954,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Video',
       'weight' => '42',
-      'description' => '',
+      'description' => 'When embedding a video from YouTube, please use the video\'s web address (URL) rather than the embed code.',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
     ),
@@ -1992,7 +2012,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'max_filesize_per_node' => '50M',
       'label' => 'Document',
       'weight' => '56',
-      'description' => '',
+      'description' => 'Choose a document or archive file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more documents by selecting "Add another item".',
       'type' => 'filefield_widget',
       'module' => 'filefield',
     ),
@@ -2049,7 +2071,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Email address',
       'weight' => '60',
-      'description' => '',
+      'description' => 'You may provide as many contact email addresses as needed by selecting "Add another item".',
       'type' => 'email_textfield',
       'module' => 'email',
     ),
@@ -2116,7 +2138,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'use_default_image' => 0,
       'label' => 'Image',
       'weight' => '54',
-      'description' => '',
+      'description' => 'Choose an image file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more images by selecting "Add another item".',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
     ),
@@ -2209,7 +2233,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'autocompletion_field_location_additional_type' => 'input',
       'label' => 'Location',
       'weight' => '19',
-      'description' => 'As you type your Event\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
+      'description' => 'As you type your Organization\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
       'type' => 'openlayers_geocoder_widget',
@@ -2612,7 +2636,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'dialog_hide' => 'null',
       'label' => 'Connection',
       'weight' => '57',
-      'description' => 'Filler',
+      'description' => ' You can use this field to indicate that your Organization is related to, located at, or hosted by an Organization or Place. As you type a title, the system will look for matches.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -2680,7 +2704,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Contact person',
       'weight' => '58',
-      'description' => '',
+      'description' => 'As you type the name of a Person, the system will look for matches. Only site users that have made a public profile will be found.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -2748,7 +2772,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Place',
       'weight' => '18',
-      'description' => '',
+      'description' => 'You can use this field to indicate that your Organization is located at an existing Place. As you type its name, the system will look for matches.',
       'type' => 'nrembrowser_browser',
       'module' => 'nrembrowser',
     ),
@@ -2809,7 +2833,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Phone number',
       'weight' => '59',
-      'description' => '',
+      'description' => 'You may provide as many contact phone numbers as needed by selecting "Add another item".',
       'type' => 'phone_textfield',
       'module' => 'phone',
     ),
@@ -2870,7 +2894,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '11',
-      'description' => 'If your Event has ties to a neighborhood or city, you may indicate that by listing a region.',
+      'description' => 'If your Organization has ties to a neighborhood or city, you may indicate that by listing a region.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -2931,7 +2955,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Tags',
       'weight' => '12',
-      'description' => 'Use commas.',
+      'description' => 'Tagging allows site users the freedom to describe their world the way they see it. Tags can be added to any content on the site, and other users can search a tag to see all matching items.
+
+You can use commas to enter multiple tags.',
       'type' => 'content_taxonomy_autocomplete',
       'module' => 'content_taxonomy_autocomplete',
     ),
@@ -3065,7 +3091,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Website',
       'weight' => '61',
-      'description' => '',
+      'description' => 'Please describe the website that you\'re linking to.
+
+You may provide as many contact websites as needed by selecting "Add another item".',
       'type' => 'link',
       'module' => 'link',
     ),
@@ -3144,7 +3172,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Video',
       'weight' => '10',
-      'description' => '',
+      'description' => 'When embedding a video from YouTube, please use the video\'s web address (URL) rather than the embed code.',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
     ),
@@ -3202,7 +3230,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'max_filesize_per_node' => '50M',
       'label' => 'Document',
       'weight' => '56',
-      'description' => '',
+      'description' => 'Choose a document or archive file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more documents by selecting "Add another item".',
       'type' => 'filefield_widget',
       'module' => 'filefield',
     ),
@@ -3259,7 +3289,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Email address',
       'weight' => '63',
-      'description' => '',
+      'description' => 'You may provide as many contact email addresses as needed by selecting "Add another item".',
       'type' => 'email_textfield',
       'module' => 'email',
     ),
@@ -3326,7 +3356,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'use_default_image' => 0,
       'label' => 'Image',
       'weight' => '54',
-      'description' => '',
+      'description' => 'Choose an image file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more images by selecting "Add another item".',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
     ),
@@ -3419,7 +3451,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'autocompletion_field_location_additional_type' => 'input',
       'label' => 'Location',
       'weight' => '19',
-      'description' => 'As you type your Event\'s address, the system will look for matches. If you select a match, the other information will be filled out automatically.
+      'description' => 'As you type your address (which can be any address you wish to be publicly associated with, such as a PO box or your work address), the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
       'type' => 'openlayers_geocoder_widget',
@@ -3890,7 +3922,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Contact person',
       'weight' => '61',
-      'description' => '',
+      'description' => 'As you type the name of a Person, the system will look for matches. Only site users that have made a public profile will be found.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -3958,7 +3990,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Place',
       'weight' => '18',
-      'description' => '',
+      'description' => 'You can use this field to indicate that you are located at an existing Place (such as the facility where you work). As you type its name, the system will look for matches.',
       'type' => 'nrembrowser_browser',
       'module' => 'nrembrowser',
     ),
@@ -4019,7 +4051,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Phone number',
       'weight' => '62',
-      'description' => '',
+      'description' => 'You may provide as many contact phone numbers as needed by selecting "Add another item".',
       'type' => 'phone_textfield',
       'module' => 'phone',
     ),
@@ -4080,7 +4112,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Region',
       'weight' => '63',
-      'description' => 'If your <em>Event</em> has ties to a neighborhood or city, you may indicate that by listing a region.',
+      'description' => 'If you have ties to a neighborhood or city, you may indicate that by listing a region.',
       'type' => 'content_taxonomy_hs',
       'module' => 'hs_content_taxonomy',
     ),
@@ -4141,7 +4173,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Tags',
       'weight' => '64',
-      'description' => 'Use commas.',
+      'description' => 'Tagging allows site users the freedom to describe their world the way they see it. Tags can be added to any content on the site, and other users can search a tag to see all matching items.
+
+You can use commas to enter multiple tags.',
       'type' => 'content_taxonomy_autocomplete',
       'module' => 'content_taxonomy_autocomplete',
     ),
@@ -4275,7 +4309,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Website',
       'weight' => '64',
-      'description' => '',
+      'description' => 'Please describe the website that you\'re linking to.
+
+You may provide as many contact websites as needed by selecting "Add another item".',
       'type' => 'link',
       'module' => 'link',
     ),
@@ -4354,7 +4390,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Video',
       'weight' => '10',
-      'description' => '',
+      'description' => 'When embedding a video from YouTube, please use the video\'s web address (URL) rather than the embed code.',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
     ),
@@ -4412,7 +4448,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'max_filesize_per_node' => '50M',
       'label' => 'Document',
       'weight' => '8',
-      'description' => '',
+      'description' => 'Choose a document or archive file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more documents by selecting "Add another item".',
       'type' => 'filefield_widget',
       'module' => 'filefield',
     ),
@@ -4469,7 +4507,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Email address',
       'weight' => '17',
-      'description' => '',
+      'description' => 'You may provide as many contact email addresses as needed by selecting "Add another item".',
       'type' => 'email_textfield',
       'module' => 'email',
     ),
@@ -4533,7 +4571,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Operating hours',
       'weight' => '22',
-      'description' => '',
+      'description' => 'Please provide information on this Place\'s operating hours.',
       'type' => 'office_hours',
       'module' => 'office_hours',
     ),
@@ -4600,7 +4638,9 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'use_default_image' => 0,
       'label' => 'Image',
       'weight' => '34',
-      'description' => '',
+      'description' => 'Choose an image file from your computer, and then select "Upload" to send it to the server.
+
+You may upload more images by selecting "Add another item".',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
     ),
@@ -5164,7 +5204,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Contact person',
       'weight' => '15',
-      'description' => '',
+      'description' => 'As you type the name of a Person, the system will look for matches. Only site users that have made a public profile will be found.',
       'type' => 'nodereference_autocomplete',
       'module' => 'nodereference',
     ),
@@ -5227,7 +5267,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Notes',
       'weight' => '23',
-      'description' => '',
+      'description' => 'Please note any exceptions to or further information about your Place\'s operating hours. This could include a lunch break during the day, only being open seasonally, or operating a 24 hour hotline.',
       'type' => 'text_textarea',
       'module' => 'text',
     ),
@@ -5288,7 +5328,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Phone number',
       'weight' => '16',
-      'description' => '',
+      'description' => 'You may provide as many contact phone numbers as needed by selecting "Add another item".',
       'type' => 'phone_textfield',
       'module' => 'phone',
     ),
@@ -5349,7 +5389,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       'default_value_php' => NULL,
       'label' => 'Special populations',
       'weight' => '21',
-      'description' => 'If your <em><b>Place</b></em> has an emphasis on the needs of a particular population, you may indicate that here. This can help users with specific needs find what they\'re looking for more easily.
+      'description' => 'If your Place has an emphasis on the needs of a particular population, you may indicate that here. This can help users with specific needs find what they\'re looking for more easily.
 
 Note that this is not the same thing as an eligibility restriction. For example, a service can focus on the needs of women without turning away men.',
       'type' => 'content_taxonomy_hs',
@@ -5616,7 +5656,9 @@ Sometimes, it\'s not clear whether a Place \'truly belongs\' within a service ca
       'default_value_php' => NULL,
       'label' => 'Website',
       'weight' => '18',
-      'description' => '',
+      'description' => 'Please describe the website that you\'re linking to.
+
+You may provide as many contact websites as needed by selecting "Add another item".',
       'type' => 'link',
       'module' => 'link',
     ),
@@ -5695,7 +5737,7 @@ Sometimes, it\'s not clear whether a Place \'truly belongs\' within a service ca
       'default_value_php' => NULL,
       'label' => 'Video',
       'weight' => '11',
-      'description' => '',
+      'description' => 'When embedding a video from YouTube, please use the video\'s web address (URL) rather than the embed code.',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
     ),
