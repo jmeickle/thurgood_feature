@@ -41,7 +41,7 @@ function thurgood_feature_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'thurgood_sidebar';
+  $context->name = 'thurgood_sidebar_node';
   $context->description = 'Thurgood: Node View Sidebar.';
   $context->tag = 'thurgood';
   $context->conditions = array(
@@ -87,11 +87,11 @@ function thurgood_feature_context_default_contexts() {
   t('Thurgood: Node View Sidebar.');
   t('thurgood');
 
-  $export['thurgood_sidebar'] = $context;
+  $export['thurgood_sidebar_node'] = $context;
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'thurgood_sidebar_alt';
+  $context->name = 'thurgood_sidebar_node_alt';
   $context->description = 'Thurgood: Node View Sidebar (Alternative).';
   $context->tag = 'thurgood';
   $context->conditions = array(
@@ -136,7 +136,7 @@ function thurgood_feature_context_default_contexts() {
   t('Thurgood: Node View Sidebar (Alternative).');
   t('thurgood');
 
-  $export['thurgood_sidebar_alt'] = $context;
+  $export['thurgood_sidebar_node_alt'] = $context;
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
