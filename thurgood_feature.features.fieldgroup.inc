@@ -576,11 +576,12 @@ function thurgood_feature_fieldgroup_default_groups() {
       '0' => 'field_toggle_location',
       '1' => 'field_noderef_place',
       '2' => 'field_location',
-      '3' => 'field_location_address',
-      '4' => 'field_location_additional',
-      '5' => 'field_location_city',
-      '6' => 'field_location_state',
-      '7' => 'field_location_zip',
+      '3' => 'field_location_name',
+      '4' => 'field_location_address',
+      '5' => 'field_location_additional',
+      '6' => 'field_location_city',
+      '7' => 'field_location_state',
+      '8' => 'field_location_zip',
     ),
   );
 
@@ -916,11 +917,12 @@ function thurgood_feature_fieldgroup_default_groups() {
       '0' => 'field_toggle_location',
       '1' => 'field_noderef_place',
       '2' => 'field_location',
-      '3' => 'field_location_address',
-      '4' => 'field_location_additional',
-      '5' => 'field_location_city',
-      '6' => 'field_location_state',
-      '7' => 'field_location_zip',
+      '3' => 'field_location_name',
+      '4' => 'field_location_address',
+      '5' => 'field_location_additional',
+      '6' => 'field_location_city',
+      '7' => 'field_location_state',
+      '8' => 'field_location_zip',
     ),
   );
 
@@ -1255,12 +1257,13 @@ function thurgood_feature_fieldgroup_default_groups() {
     'fields' => array(
       '0' => 'field_toggle_location',
       '1' => 'field_noderef_place',
-      '2' => 'field_location',
-      '3' => 'field_location_address',
-      '4' => 'field_location_additional',
-      '5' => 'field_location_city',
-      '6' => 'field_location_state',
-      '7' => 'field_location_zip',
+      '2' => 'field_location_name',
+      '3' => 'field_location',
+      '4' => 'field_location_address',
+      '5' => 'field_location_additional',
+      '6' => 'field_location_city',
+      '7' => 'field_location_state',
+      '8' => 'field_location_zip',
     ),
   );
 
@@ -1400,7 +1403,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '3',
+    'weight' => '4',
     'fields' => array(
       '0' => 'field_noderef_connection',
     ),
@@ -1447,7 +1450,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '0',
+    'weight' => '1',
     'fields' => array(
       '0' => 'field_noderef_contact',
       '1' => 'field_phone',
@@ -1497,7 +1500,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '5',
+    'weight' => '6',
     'fields' => array(
       '0' => 'field_document',
     ),
@@ -1544,7 +1547,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '6',
+    'weight' => '7',
     'fields' => array(
       '0' => 'field_image',
     ),
@@ -1591,14 +1594,15 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '1',
+    'weight' => '2',
     'fields' => array(
       '0' => 'field_location',
-      '1' => 'field_location_address',
-      '2' => 'field_location_additional',
-      '3' => 'field_location_city',
-      '4' => 'field_location_state',
-      '5' => 'field_location_zip',
+      '1' => 'field_location_name',
+      '2' => 'field_location_address',
+      '3' => 'field_location_additional',
+      '4' => 'field_location_city',
+      '5' => 'field_location_state',
+      '6' => 'field_location_zip',
     ),
   );
 
@@ -1643,7 +1647,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '2',
+    'weight' => '3',
     'fields' => array(
       '0' => 'field_taxonomy_services',
       '1' => 'field_taxonomy_populations',
@@ -1693,7 +1697,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '4',
+    'weight' => '5',
     'fields' => array(
       '0' => 'field_taxonomy_region',
       '1' => 'field_taxonomy_tags',
@@ -1741,7 +1745,7 @@ function thurgood_feature_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '7',
+    'weight' => '8',
     'fields' => array(
       '0' => 'field_video',
     ),

@@ -227,7 +227,7 @@ function thurgood_feature_views_default_views() {
       'field' => 'type',
       'relationship' => 'field_noderef_connection_nid',
     ),
-    'field_noderef_connection_nid' => array(
+    'title' => array(
       'label' => '',
       'alter' => array(
         'alter_text' => 0,
@@ -248,22 +248,14 @@ function thurgood_feature_views_default_views() {
         'strip_tags' => 0,
       ),
       'empty' => '',
-      'hide_empty' => 1,
+      'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'none',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => 1,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => 0,
-      ),
+      'link_to_node' => 1,
       'exclude' => 0,
-      'id' => 'field_noderef_connection_nid',
-      'table' => 'node_data_field_noderef_connection',
-      'field' => 'field_noderef_connection_nid',
-      'relationship' => 'none',
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'field_noderef_connection_nid',
     ),
   ));
   $handler->override_option('sorts', array(
@@ -856,8 +848,49 @@ function thurgood_feature_views_default_views() {
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('attachment', 'Attachment', 'attachment_1');
   $handler->override_option('fields', array(
+    'field_location_name_value' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_location_name_value',
+      'table' => 'node_data_field_location_name',
+      'field' => 'field_location_name_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
     'field_location_address_value' => array(
-      'label' => 'Street address',
+      'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -880,7 +913,7 @@ function thurgood_feature_views_default_views() {
       'hide_empty' => 1,
       'empty_zero' => 0,
       'link_to_node' => 0,
-      'label_type' => 'widget',
+      'label_type' => 'none',
       'format' => 'default',
       'multiple' => array(
         'group' => TRUE,
@@ -898,7 +931,7 @@ function thurgood_feature_views_default_views() {
       'relationship' => 'none',
     ),
     'field_location_additional_value' => array(
-      'label' => 'Additional address info',
+      'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -921,7 +954,7 @@ function thurgood_feature_views_default_views() {
       'hide_empty' => 1,
       'empty_zero' => 0,
       'link_to_node' => 0,
-      'label_type' => 'widget',
+      'label_type' => 'none',
       'format' => 'default',
       'multiple' => array(
         'group' => TRUE,
@@ -939,7 +972,7 @@ function thurgood_feature_views_default_views() {
       'relationship' => 'none',
     ),
     'field_location_city_value' => array(
-      'label' => 'City',
+      'label' => '',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -962,7 +995,7 @@ function thurgood_feature_views_default_views() {
       'hide_empty' => 1,
       'empty_zero' => 0,
       'link_to_node' => 0,
-      'label_type' => 'widget',
+      'label_type' => 'none',
       'format' => 'default',
       'multiple' => array(
         'group' => TRUE,
@@ -970,7 +1003,7 @@ function thurgood_feature_views_default_views() {
         'multiple_from' => '',
         'multiple_reversed' => FALSE,
       ),
-      'exclude' => 0,
+      'exclude' => 1,
       'id' => 'field_location_city_value',
       'table' => 'node_data_field_location_city',
       'field' => 'field_location_city_value',
@@ -980,10 +1013,10 @@ function thurgood_feature_views_default_views() {
       'relationship' => 'none',
     ),
     'field_location_state_value' => array(
-      'label' => 'State',
+      'label' => '',
       'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
+        'alter_text' => 1,
+        'text' => '[field_location_city_value], [field_location_state_value] ',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -1003,7 +1036,7 @@ function thurgood_feature_views_default_views() {
       'hide_empty' => 1,
       'empty_zero' => 0,
       'link_to_node' => 0,
-      'label_type' => 'widget',
+      'label_type' => 'none',
       'format' => 'default',
       'multiple' => array(
         'group' => TRUE,
@@ -1021,10 +1054,10 @@ function thurgood_feature_views_default_views() {
       'relationship' => 'none',
     ),
     'field_location_zip_value' => array(
-      'label' => 'ZIP',
+      'label' => '',
       'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
+        'alter_text' => 1,
+        'text' => ' [field_location_zip_value]',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -1044,7 +1077,7 @@ function thurgood_feature_views_default_views() {
       'hide_empty' => 1,
       'empty_zero' => 0,
       'link_to_node' => 0,
-      'label_type' => 'widget',
+      'label_type' => 'none',
       'format' => 'default',
       'multiple' => array(
         'group' => TRUE,
@@ -1075,6 +1108,41 @@ function thurgood_feature_views_default_views() {
       'id' => 'views_or_begin',
       'table' => 'node',
       'field' => 'views_or_begin',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_location_name_value' => array(
+      'operator' => 'not empty',
+      'value' => '',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 1,
+      'id' => 'field_location_name_value',
+      'table' => 'node_data_field_location_name',
+      'field' => 'field_location_name_value',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+    'views_or_next_4' => array(
+      'operator' => '=',
+      'value' => '',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'views_or_next_4',
+      'table' => 'node',
+      'field' => 'views_or_next',
       'override' => array(
         'button' => 'Use default',
       ),
@@ -1255,6 +1323,15 @@ function thurgood_feature_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+  ));
+  $handler->override_option('row_options', array(
+    'inline' => array(
+      'field_location_city_value' => 'field_location_city_value',
+      'field_location_state_value' => 'field_location_state_value',
+      'field_location_zip_value' => 'field_location_zip_value',
+    ),
+    'separator' => '',
+    'hide_empty' => 0,
   ));
   $handler->override_option('attachment_position', 'after');
   $handler->override_option('inherit_arguments', TRUE);
@@ -1767,7 +1844,7 @@ function thurgood_feature_views_default_views() {
     ),
   ));
   $handler->override_option('filters', array(
-    'field_document_list' => array(
+    'field_image_list' => array(
       'operator' => '=',
       'value' => '1',
       'group' => '0',
@@ -1776,9 +1853,9 @@ function thurgood_feature_views_default_views() {
         'operator' => FALSE,
         'label' => '',
       ),
-      'id' => 'field_document_list',
-      'table' => 'node_data_field_document',
-      'field' => 'field_document_list',
+      'id' => 'field_image_list',
+      'table' => 'node_data_field_image',
+      'field' => 'field_image_list',
       'override' => array(
         'button' => 'Use default',
       ),
@@ -3280,6 +3357,134 @@ if (!empty($nid)) {print l("View the author\'s full profile.", drupal_lookup_pat
 
   $views[$view->name] = $view;
 
+  // Exported view: thurgood_roundtable_list
+  $view = new view;
+  $view->name = 'thurgood_roundtable_list';
+  $view->description = 'Thurgood: Reentry Roundtable List';
+  $view->tag = 'thurgood';
+  $view->view_php = '';
+  $view->base_table = 'node';
+  $view->is_cacheable = FALSE;
+  $view->api_version = 2;
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'title' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('sorts', array(
+    'title' => array(
+      'order' => 'ASC',
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'type' => array(
+      'operator' => 'in',
+      'value' => array(
+        'organization' => 'organization',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'type',
+      'table' => 'node',
+      'field' => 'type',
+      'relationship' => 'none',
+    ),
+    'name' => array(
+      'operator' => '=',
+      'value' => 'reentry roundtable',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'case' => 1,
+      'id' => 'name',
+      'table' => 'term_data',
+      'field' => 'name',
+      'relationship' => 'none',
+    ),
+    'vid' => array(
+      'operator' => 'in',
+      'value' => array(
+        '1' => '1',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'vid',
+      'table' => 'term_data',
+      'field' => 'vid',
+      'relationship' => 'none',
+    ),
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'status',
+      'table' => 'node',
+      'field' => 'status',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('items_per_page', 0);
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
+
+  $views[$view->name] = $view;
+
   // Exported view: thurgood_search_data
   $view = new view;
   $view->name = 'thurgood_search_data';
@@ -3537,6 +3742,168 @@ if (!empty($nid)) {print l("View the author\'s full profile.", drupal_lookup_pat
     'default' => 'default',
     'page_1' => 'page_1',
   ));
+
+  $views[$view->name] = $view;
+
+  // Exported view: thurgood_tutorial
+  $view = new view;
+  $view->name = 'thurgood_tutorial';
+  $view->description = 'Thurgood: Tutorial';
+  $view->tag = 'thurgood';
+  $view->view_php = '';
+  $view->base_table = 'node';
+  $view->is_cacheable = FALSE;
+  $view->api_version = 2;
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->override_option('fields', array(
+    'delta' => array(
+      'label' => 'Image (field_image) - delta',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => 'Page [delta]',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'set_precision' => FALSE,
+      'precision' => 0,
+      'decimal' => '.',
+      'separator' => ',',
+      'prefix' => '',
+      'suffix' => '',
+      'exclude' => 1,
+      'id' => 'delta',
+      'table' => 'node_data_field_image',
+      'field' => 'delta',
+      'relationship' => 'none',
+    ),
+    'field_image_data' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 1,
+        'text' => '[field_image_data]<br /><br />',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'data_key' => 'description',
+      'exclude' => 0,
+      'id' => 'field_image_data',
+      'table' => 'node_data_field_image',
+      'field' => 'field_image_data',
+      'relationship' => 'none',
+    ),
+    'field_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'image_plain',
+      'multiple' => array(
+        'group' => 0,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => 0,
+      ),
+      'exclude' => 0,
+      'id' => 'field_image_fid',
+      'table' => 'node_data_field_image',
+      'field' => 'field_image_fid',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('filters', array(
+    'nid' => array(
+      'operator' => '=',
+      'value' => array(
+        'value' => '325',
+        'min' => '',
+        'max' => '',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'nid',
+      'table' => 'node',
+      'field' => 'nid',
+      'relationship' => 'none',
+    ),
+  ));
+  $handler->override_option('access', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('cache', array(
+    'type' => 'none',
+  ));
+  $handler->override_option('items_per_page', 0);
+  $handler->override_option('use_pager', '0');
+  $handler->override_option('style_plugin', 'quicktabs');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'tab_style' => 'Navlist',
+    'tab_title_field' => 'delta',
+  ));
+  $handler->override_option('row_options', array(
+    'inline' => array(),
+    'separator' => ' ',
+    'hide_empty' => 0,
+  ));
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->override_option('block_description', '');
+  $handler->override_option('block_caching', -1);
 
   $views[$view->name] = $view;
 

@@ -1010,7 +1010,7 @@ This site is an open source project built using the <a href="www.drupal.org">Dru
     ),
   );
   $display->cache = array();
-  $display->title = 'Meet Connecticut\'s Roundtables';
+  $display->title = 'About Connecticut\'s roundtables';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass;
@@ -1023,7 +1023,7 @@ This site is an open source project built using the <a href="www.drupal.org">Dru
     $pane->configuration = array(
       'admin_title' => '',
       'title' => '',
-      'body' => 'Some basic information and links to each of the roundtables will be placed here.',
+      'body' => 'These are the Reentry Roundtables currently participating in the Collaborative:',
       'format' => '1',
       'substitute' => TRUE,
     );
@@ -1036,11 +1036,135 @@ This site is an open source project built using the <a href="www.drupal.org">Dru
     $pane->position = 0;
     $display->content['new-1'] = $pane;
     $display->panels['center'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'center';
+    $pane->type = 'block';
+    $pane->subtype = 'views-d5765b6a81565ce0568232fa7398e95d';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['thurgood_roundtables'] = $page;
+
+  $page = new stdClass;
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'thurgood_tutorial';
+  $page->task = 'page';
+  $page->admin_title = 'Thurgood: Tutorial';
+  $page->admin_description = 'Tutorial page for Thurgood.';
+  $page->path = 'tutorial';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'none',
+    'title' => '',
+    'weight' => '0',
+    'name' => 'navigation',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'weight' => 0,
+      'name' => 'navigation',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array();
+  $page->default_handlers = array();
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_thurgood_tutorial_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'thurgood_tutorial';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Landing page',
+    'no_blocks' => FALSE,
+    'pipeline' => 'ipe',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Tutorial: Add a Place';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass;
+    $pane->pid = 'new-1';
+    $pane->panel = 'center';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => 'This tutorial provides a quick overview of how you can add a new Place to the site. It\'s not meant to be exhaustive, however, as there is further help on each screen of the creation process.',
+      'format' => '1',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'center';
+    $pane->type = 'block';
+    $pane->subtype = 'views-thurgood_tutorial-block_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'default',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['center'][1] = 'new-2';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['thurgood_tutorial'] = $page;
 
  return $pages;
 

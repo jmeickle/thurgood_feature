@@ -58,7 +58,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-48',
   );
   // Exported menu link: primary-links:logout
   $menu_links['primary-links:logout'] = array(
@@ -76,7 +76,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-43',
+    'weight' => '-45',
   );
   // Exported menu link: primary-links:place/search
   $menu_links['primary-links:place/search'] = array(
@@ -94,7 +94,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-49',
   );
   // Exported menu link: primary-links:roundtables
   $menu_links['primary-links:roundtables'] = array(
@@ -104,7 +104,7 @@ function thurgood_feature_menu_default_menu_links() {
     'link_title' => 'Roundtables',
     'options' => array(
       'attributes' => array(
-        'title' => 'More information about the Reentry Roundtables in Connecticut.',
+        'title' => 'More information about the Reentry Roundtables located in Connecticut.',
       ),
     ),
     'module' => 'system',
@@ -114,6 +114,42 @@ function thurgood_feature_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-47',
   );
+  // Exported menu link: primary-links:user/login
+  $menu_links['primary-links:user/login'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'user/login',
+    'router_path' => 'user/login',
+    'link_title' => 'Login',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Log in to your existing site account.',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-44',
+  );
+  // Exported menu link: primary-links:user/register
+  $menu_links['primary-links:user/register'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'user/register',
+    'router_path' => 'user/register',
+    'link_title' => 'Register',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Create a new site account.',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-43',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -122,6 +158,8 @@ function thurgood_feature_menu_default_menu_links() {
   t('Logout');
   t('Roundtables');
   t('Search');
+  t('Login');
+  t('Register');
 
 
   return $menu_links;

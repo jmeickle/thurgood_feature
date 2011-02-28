@@ -12,11 +12,12 @@ function thurgood_feature_strongarm() {
   $strongarm->value = array(
     'title' => '-5',
     'body_field' => '-4',
-    'revision_information' => '5',
-    'author' => '4',
-    'options' => '6',
-    'menu' => '3',
+    'revision_information' => '3',
+    'author' => '6',
+    'options' => '5',
+    'menu' => '8',
     'path' => '7',
+    'workflow' => '4',
   );
 
   $export['content_extra_weights_article'] = $strongarm;
@@ -27,11 +28,12 @@ function thurgood_feature_strongarm() {
   $strongarm->value = array(
     'title' => '-5',
     'body_field' => '-4',
-    'revision_information' => '7',
+    'revision_information' => '5',
     'author' => '8',
-    'options' => '9',
-    'menu' => '6',
-    'path' => '10',
+    'options' => '7',
+    'menu' => '10',
+    'path' => '9',
+    'workflow' => '6',
   );
 
   $export['content_extra_weights_event'] = $strongarm;
@@ -42,11 +44,12 @@ function thurgood_feature_strongarm() {
   $strongarm->value = array(
     'title' => '-5',
     'body_field' => '-4',
-    'revision_information' => '6',
-    'author' => '5',
-    'options' => '7',
-    'menu' => '4',
+    'revision_information' => '4',
+    'author' => '7',
+    'options' => '6',
+    'menu' => '9',
     'path' => '8',
+    'workflow' => '5',
   );
 
   $export['content_extra_weights_organization'] = $strongarm;
@@ -57,11 +60,12 @@ function thurgood_feature_strongarm() {
   $strongarm->value = array(
     'title' => '-5',
     'body_field' => '-4',
-    'revision_information' => '6',
-    'author' => '5',
-    'options' => '7',
-    'menu' => '4',
+    'revision_information' => '4',
+    'author' => '7',
+    'options' => '6',
+    'menu' => '9',
     'path' => '8',
+    'workflow' => '5',
   );
 
   $export['content_extra_weights_person'] = $strongarm;
@@ -71,12 +75,13 @@ function thurgood_feature_strongarm() {
   $strongarm->name = 'content_extra_weights_place';
   $strongarm->value = array(
     'title' => '-1',
-    'body_field' => '10',
-    'revision_information' => '11',
+    'body_field' => '0',
+    'revision_information' => '9',
     'author' => '12',
-    'options' => '13',
-    'menu' => '9',
-    'path' => '14',
+    'options' => '11',
+    'menu' => '14',
+    'path' => '13',
+    'workflow' => '10',
   );
 
   $export['content_extra_weights_place'] = $strongarm;
