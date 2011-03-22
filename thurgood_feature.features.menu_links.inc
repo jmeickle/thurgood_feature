@@ -22,7 +22,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-40',
   );
   // Exported menu link: primary-links:bounce/place/search
   $menu_links['primary-links:bounce/place/search'] = array(
@@ -40,7 +40,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
-    'weight' => '-49',
+    'weight' => '-39',
   );
   // Exported menu link: primary-links:bounce/roundtables
   $menu_links['primary-links:bounce/roundtables'] = array(
@@ -58,7 +58,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '1',
-    'weight' => '-47',
+    'weight' => '-37',
   );
   // Exported menu link: primary-links:contact
   $menu_links['primary-links:contact'] = array(
@@ -76,7 +76,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-40',
     'parent_path' => 'bounce/roundtables',
   );
   // Exported menu link: primary-links:dashboard
@@ -95,7 +95,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-38',
   );
   // Exported menu link: primary-links:event/search
   $menu_links['primary-links:event/search'] = array(
@@ -113,7 +113,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-50',
+    'weight' => '-40',
     'parent_path' => 'bounce/place/search',
   );
   // Exported menu link: primary-links:place/search
@@ -132,7 +132,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-39',
     'parent_path' => 'bounce/place/search',
   );
   // Exported menu link: primary-links:roundtables
@@ -151,7 +151,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '-39',
     'parent_path' => 'bounce/roundtables',
   );
   // Exported menu link: primary-links:website
@@ -166,7 +166,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '1',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '-38',
     'parent_path' => 'bounce/roundtables',
   );
   // Exported menu link: primary-links:user/login
@@ -185,7 +185,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-44',
+    'weight' => '-34',
   );
   // Exported menu link: primary-links:user/register
   $menu_links['primary-links:user/register'] = array(
@@ -203,7 +203,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-43',
+    'weight' => '-33',
   );
   // Exported menu link: primary-links:logout
   $menu_links['primary-links:logout'] = array(
@@ -221,7 +221,7 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-35',
   );
   // Translatables
   // Included for use with string extractors like potx.
