@@ -1257,8 +1257,8 @@ function thurgood_feature_fieldgroup_default_groups() {
     'fields' => array(
       '0' => 'field_toggle_location',
       '1' => 'field_noderef_place',
-      '2' => 'field_location_name',
-      '3' => 'field_location',
+      '2' => 'field_location',
+      '3' => 'field_location_name',
       '4' => 'field_location_address',
       '5' => 'field_location_additional',
       '6' => 'field_location_city',
