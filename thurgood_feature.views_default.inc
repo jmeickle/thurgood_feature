@@ -3362,7 +3362,7 @@ print \'
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'openlayers_map_thurgood_node_test',
+      'format' => 'openlayers_map_thurgood_node_preset',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -3928,7 +3928,7 @@ print \'
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'openlayers_map_thurgood_node_test',
+      'format' => 'openlayers_map_thurgood_node_preset',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',

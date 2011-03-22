@@ -56,7 +56,7 @@ function thurgood_feature_openlayers_presets() {
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
-  $openlayers_presets->name = 'thurgood_node_test';
+  $openlayers_presets->name = 'thurgood_node_preset';
   $openlayers_presets->title = 'Thurgood: Node Location Map';
   $openlayers_presets->description = 'Map displayed when viewing content with a Location.';
   $openlayers_presets->data = array(
@@ -105,7 +105,7 @@ function thurgood_feature_openlayers_presets() {
     ),
   );
 
-  $export['thurgood_node_test'] = $openlayers_presets;
+  $export['thurgood_node_preset'] = $openlayers_presets;
   $openlayers_presets = new stdClass;
   $openlayers_presets->disabled = FALSE; /* Edit this to true to make a default openlayers_presets disabled initially */
   $openlayers_presets->api_version = 1;
