@@ -8,7 +8,55 @@ function thurgood_feature_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'testcontext';
+  $context->name = 'thurgood_sidebar_article';
+  $context->description = 'Thurgood: Article View Sidebar.';
+  $context->tag = 'thurgood';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'article' => 'article',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'quicktabs-3' => array(
+          'module' => 'quicktabs',
+          'delta' => 3,
+          'region' => 'mid',
+          'weight' => 0,
+        ),
+        'quicktabs-1' => array(
+          'module' => 'quicktabs',
+          'delta' => 1,
+          'region' => 'mid',
+          'weight' => 1,
+        ),
+        'quicktabs-2' => array(
+          'module' => 'quicktabs',
+          'delta' => 2,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Thurgood: Article View Sidebar.');
+  t('thurgood');
+
+  $export['thurgood_sidebar_article'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'thurgood_sidebar_dashboard';
   $context->description = 'Thurgood: Dashboard Sidebar';
   $context->tag = 'thurgood';
   $context->conditions = array(
@@ -37,68 +85,17 @@ function thurgood_feature_context_default_contexts() {
   t('Thurgood: Dashboard Sidebar');
   t('thurgood');
 
-  $export['testcontext'] = $context;
+  $export['thurgood_sidebar_dashboard'] = $context;
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'thurgood_sidebar_node';
-  $context->description = 'Thurgood: Node View Sidebar.';
+  $context->name = 'thurgood_sidebar_event';
+  $context->description = 'Thurgood: Event View Sidebar.';
   $context->tag = 'thurgood';
   $context->conditions = array(
     'node' => array(
       'values' => array(
-        'article' => 'article',
         'event' => 'event',
-        'place' => 'place',
-      ),
-      'options' => array(
-        'node_form' => '0',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'quicktabs-2' => array(
-          'module' => 'quicktabs',
-          'delta' => 2,
-          'region' => 'right',
-          'weight' => 0,
-        ),
-        'quicktabs-1' => array(
-          'module' => 'quicktabs',
-          'delta' => 1,
-          'region' => 'right',
-          'weight' => 1,
-        ),
-        'quicktabs-3' => array(
-          'module' => 'quicktabs',
-          'delta' => 3,
-          'region' => 'right',
-          'weight' => 2,
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Thurgood: Node View Sidebar.');
-  t('thurgood');
-
-  $export['thurgood_sidebar_node'] = $context;
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'thurgood_sidebar_node_alt';
-  $context->description = 'Thurgood: Node View Sidebar (Alternative).';
-  $context->tag = 'thurgood';
-  $context->conditions = array(
-    'node' => array(
-      'values' => array(
-        'organization' => 'organization',
-        'person' => 'person',
       ),
       'options' => array(
         'node_form' => '0',
@@ -111,18 +108,30 @@ function thurgood_feature_context_default_contexts() {
         'quicktabs-4' => array(
           'module' => 'quicktabs',
           'delta' => 4,
-          'region' => 'right',
+          'region' => 'mid',
           'weight' => 0,
         ),
         'quicktabs-1' => array(
           'module' => 'quicktabs',
           'delta' => 1,
+          'region' => 'mid',
+          'weight' => 1,
+        ),
+        'quicktabs-2' => array(
+          'module' => 'quicktabs',
+          'delta' => 2,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+        'views-thurgood_block_map-block_2' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_2',
           'region' => 'right',
           'weight' => 1,
         ),
-        'quicktabs-3' => array(
-          'module' => 'quicktabs',
-          'delta' => 3,
+        'views-thurgood_block_map-block_3' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_3',
           'region' => 'right',
           'weight' => 2,
         ),
@@ -133,10 +142,190 @@ function thurgood_feature_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Thurgood: Node View Sidebar (Alternative).');
+  t('Thurgood: Event View Sidebar.');
   t('thurgood');
 
-  $export['thurgood_sidebar_node_alt'] = $context;
+  $export['thurgood_sidebar_event'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'thurgood_sidebar_organization';
+  $context->description = 'Thurgood: Organization View Sidebar.';
+  $context->tag = 'thurgood';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'organization' => 'organization',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'quicktabs-5' => array(
+          'module' => 'quicktabs',
+          'delta' => 5,
+          'region' => 'mid',
+          'weight' => 0,
+        ),
+        'quicktabs-1' => array(
+          'module' => 'quicktabs',
+          'delta' => 1,
+          'region' => 'mid',
+          'weight' => 1,
+        ),
+        'quicktabs-2' => array(
+          'module' => 'quicktabs',
+          'delta' => 2,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+        'views-thurgood_block_map-block_2' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_2',
+          'region' => 'right',
+          'weight' => 1,
+        ),
+        'views-thurgood_block_map-block_3' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_3',
+          'region' => 'right',
+          'weight' => 2,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Thurgood: Organization View Sidebar.');
+  t('thurgood');
+
+  $export['thurgood_sidebar_organization'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'thurgood_sidebar_person';
+  $context->description = 'Thurgood: Person View Sidebar.';
+  $context->tag = 'thurgood';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'person' => 'person',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'quicktabs-6' => array(
+          'module' => 'quicktabs',
+          'delta' => 6,
+          'region' => 'mid',
+          'weight' => 0,
+        ),
+        'quicktabs-1' => array(
+          'module' => 'quicktabs',
+          'delta' => 1,
+          'region' => 'mid',
+          'weight' => 1,
+        ),
+        'quicktabs-2' => array(
+          'module' => 'quicktabs',
+          'delta' => 2,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+        'views-thurgood_block_map-block_2' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_2',
+          'region' => 'right',
+          'weight' => 1,
+        ),
+        'views-thurgood_block_map-block_3' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_3',
+          'region' => 'right',
+          'weight' => 2,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Thurgood: Person View Sidebar.');
+  t('thurgood');
+
+  $export['thurgood_sidebar_person'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'thurgood_sidebar_place';
+  $context->description = 'Thurgood: Place View Sidebar.';
+  $context->tag = 'thurgood';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'place' => 'place',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'quicktabs-7' => array(
+          'module' => 'quicktabs',
+          'delta' => 7,
+          'region' => 'mid',
+          'weight' => 0,
+        ),
+        'quicktabs-1' => array(
+          'module' => 'quicktabs',
+          'delta' => 1,
+          'region' => 'mid',
+          'weight' => 1,
+        ),
+        'quicktabs-2' => array(
+          'module' => 'quicktabs',
+          'delta' => 2,
+          'region' => 'right',
+          'weight' => 0,
+        ),
+        'views-thurgood_block_map-block_2' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_2',
+          'region' => 'right',
+          'weight' => 1,
+        ),
+        'views-thurgood_block_map-block_3' => array(
+          'module' => 'views',
+          'delta' => 'thurgood_block_map-block_3',
+          'region' => 'right',
+          'weight' => 2,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Thurgood: Place View Sidebar.');
+  t('thurgood');
+
+  $export['thurgood_sidebar_place'] = $context;
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
