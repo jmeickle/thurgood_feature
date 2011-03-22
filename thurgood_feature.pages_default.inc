@@ -541,20 +541,20 @@ function thurgood_feature_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'thurgood_about';
   $page->task = 'page';
-  $page->admin_title = 'Thurgood: About';
-  $page->admin_description = 'About page.';
-  $page->path = 'about';
+  $page->admin_title = 'Thurgood: Website Info';
+  $page->admin_description = 'Website about page.';
+  $page->path = 'website';
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'About',
-    'weight' => '-46',
+    'title' => 'Website',
     'name' => 'primary-links',
+    'weight' => '-46',
     'parent' => array(
       'type' => 'none',
       'title' => '',
-      'weight' => 0,
       'name' => 'navigation',
+      'weight' => '0',
     ),
   );
   $page->arguments = array();
@@ -587,7 +587,7 @@ function thurgood_feature_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'About this site';
+  $display->title = 'About this website';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass;
@@ -788,7 +788,7 @@ This site is an open source project built using the <a href="www.drupal.org">Dru
     $pane->panel = 'center_';
     $pane->type = 'block';
     $pane->subtype = 'thurgood_custom_module-main';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,
