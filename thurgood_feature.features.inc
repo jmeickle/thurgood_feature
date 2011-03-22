@@ -143,6 +143,73 @@ function thurgood_feature_node_info() {
 function thurgood_feature_rules_defaults() {
   return array(
     'rules' => array(
+      'rules_assign_site_editor_to_users_who_aren_t_pending_confirmation_' => array(
+        '#type' => 'rule',
+        '#set' => 'event_user_login',
+        '#label' => 'Assign site editor to users who aren\'t pending confirmation.',
+        '#active' => 1,
+        '#weight' => '-10',
+        '#categories' => array(
+          '0' => 'thurgood',
+          '1' => 'thurgood_feature',
+        ),
+        '#status' => 'default',
+        '#conditions' => array(
+          '0' => array(
+            '#type' => 'condition',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 4,
+                '1' => 10,
+              ),
+              'operation' => 'OR',
+              '#argument map' => array(
+                'user' => 'account',
+              ),
+            ),
+            '#name' => 'rules_condition_user_hasrole',
+            '#info' => array(
+              'label' => 'User has role(s)',
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'User',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#negate' => 1,
+            '#weight' => 0,
+          ),
+        ),
+        '#actions' => array(
+          '0' => array(
+            '#weight' => 0,
+            '#info' => array(
+              'label' => 'Add user role',
+              'arguments' => array(
+                'user' => array(
+                  'type' => 'user',
+                  'label' => 'User whos roles should be changed',
+                ),
+              ),
+              'module' => 'User',
+            ),
+            '#name' => 'rules_action_user_addrole',
+            '#settings' => array(
+              'roles' => array(
+                '0' => 5,
+                '1' => 11,
+              ),
+              '#argument map' => array(
+                'user' => 'account',
+              ),
+            ),
+            '#type' => 'action',
+          ),
+        ),
+        '#version' => 6003,
+      ),
       'rules_assign_edit' => array(
         '#type' => 'rule',
         '#set' => 'event_user_update',
