@@ -3586,7 +3586,7 @@ You may upload more images by selecting "Add another item".',
       'autocompletion_field_location_name_content' => '[premise]',
       'autocompletion_field_location_name_type' => 'input',
       'label' => 'Location',
-      'weight' => '20',
+      'weight' => '19',
       'description' => 'As you type your address (which can be any address you wish to be publicly associated with, such as a PO box or your work address), the system will look for matches. If you select a match, the other information will be filled out automatically.
 
 If there are no matches, or the match is inaccurate, you can draw a new point on the map with the pencil icon and then fill in the other information.',
@@ -3839,7 +3839,7 @@ If there are no matches, or the match is inaccurate, you can draw a new point on
       ),
       'default_value_php' => NULL,
       'label' => 'Location name',
-      'weight' => '19',
+      'weight' => '20',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
