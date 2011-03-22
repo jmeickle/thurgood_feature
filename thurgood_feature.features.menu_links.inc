@@ -24,23 +24,60 @@ function thurgood_feature_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
   );
-  // Exported menu link: primary-links:about
-  $menu_links['primary-links:about'] = array(
+  // Exported menu link: primary-links:bounce/place/search
+  $menu_links['primary-links:bounce/place/search'] = array(
     'menu_name' => 'primary-links',
-    'link_path' => 'about',
-    'router_path' => 'about',
+    'link_path' => 'bounce/place/search',
+    'router_path' => 'bounce',
+    'link_title' => 'Search',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-49',
+  );
+  // Exported menu link: primary-links:bounce/roundtables
+  $menu_links['primary-links:bounce/roundtables'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'bounce/roundtables',
+    'router_path' => 'bounce',
     'link_title' => 'About',
     'options' => array(
       'attributes' => array(
-        'title' => 'Information about the ctreentry.info website.',
+        'title' => '',
       ),
     ),
-    'module' => 'system',
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '1',
+    'weight' => '-47',
+  );
+  // Exported menu link: primary-links:contact
+  $menu_links['primary-links:contact'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'contact',
+    'router_path' => 'contact',
+    'link_title' => 'Contact',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Get in touch with us.',
+      ),
+    ),
+    'module' => 'menu',
     'hidden' => '0',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-46',
+    'weight' => '-50',
+    'parent_path' => 'bounce/roundtables',
   );
   // Exported menu link: primary-links:dashboard
   $menu_links['primary-links:dashboard'] = array(
@@ -60,15 +97,15 @@ function thurgood_feature_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-48',
   );
-  // Exported menu link: primary-links:logout
-  $menu_links['primary-links:logout'] = array(
+  // Exported menu link: primary-links:event/search
+  $menu_links['primary-links:event/search'] = array(
     'menu_name' => 'primary-links',
-    'link_path' => 'logout',
-    'router_path' => 'logout',
-    'link_title' => 'Logout',
+    'link_path' => 'event/search',
+    'router_path' => 'event/search',
+    'link_title' => 'Events',
     'options' => array(
       'attributes' => array(
-        'title' => 'Log out of your account. You will need to log back in to create site content.',
+        'title' => 'Use a calendar to search for events by date, region, and tags.',
       ),
     ),
     'module' => 'menu',
@@ -76,14 +113,15 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '-50',
+    'parent_path' => 'bounce/place/search',
   );
   // Exported menu link: primary-links:place/search
   $menu_links['primary-links:place/search'] = array(
     'menu_name' => 'primary-links',
     'link_path' => 'place/search',
     'router_path' => 'place/search',
-    'link_title' => 'Search',
+    'link_title' => 'Places',
     'options' => array(
       'attributes' => array(
         'title' => 'Use a map to search for resources that meet your needs.',
@@ -95,6 +133,7 @@ function thurgood_feature_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-49',
+    'parent_path' => 'bounce/place/search',
   );
   // Exported menu link: primary-links:roundtables
   $menu_links['primary-links:roundtables'] = array(
@@ -112,7 +151,23 @@ function thurgood_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
+    'weight' => '-49',
+    'parent_path' => 'bounce/roundtables',
+  );
+  // Exported menu link: primary-links:website
+  $menu_links['primary-links:website'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'website',
+    'router_path' => 'website',
+    'link_title' => 'Website',
+    'options' => array(),
+    'module' => 'system',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '1',
+    'expanded' => '0',
+    'weight' => '-48',
+    'parent_path' => 'bounce/roundtables',
   );
   // Exported menu link: primary-links:user/login
   $menu_links['primary-links:user/login'] = array(
@@ -150,16 +205,38 @@ function thurgood_feature_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-43',
   );
+  // Exported menu link: primary-links:logout
+  $menu_links['primary-links:logout'] = array(
+    'menu_name' => 'primary-links',
+    'link_path' => 'logout',
+    'router_path' => 'logout',
+    'link_title' => 'Logout',
+    'options' => array(
+      'attributes' => array(
+        'title' => 'Log out of your account. You will need to log back in to create site content.',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-45',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
+  t('Contact');
   t('Dashboard');
+  t('Events');
   t('Home');
-  t('Logout');
+  t('Places');
   t('Roundtables');
+  t('Website');
   t('Search');
   t('Login');
   t('Register');
+  t('Logout');
 
 
   return $menu_links;
