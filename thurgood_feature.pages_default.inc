@@ -539,9 +539,6 @@ function thurgood_feature_default_page_manager_pages() {
   $page = new stdClass;
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page = new stdClass;
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
-  $page->api_version = 1;
   $page->name = 'thurgood_bounce';
   $page->task = 'page';
   $page->admin_title = 'Thurgood: Bounce';
@@ -694,6 +691,7 @@ function thurgood_feature_default_page_manager_pages() {
           0 => 1,
           1 => 2,
           2 => 3,
+          3 => 4,
         ),
         'parent' => 'canvas',
       ),
@@ -708,7 +706,7 @@ function thurgood_feature_default_page_manager_pages() {
       ),
       'top' => array(
         'type' => 'region',
-        'title' => 'Top',
+        'title' => 'Create',
         'width' => 100,
         'width_type' => '%',
         'parent' => '1',
@@ -725,7 +723,7 @@ function thurgood_feature_default_page_manager_pages() {
       ),
       'top__admin_' => array(
         'type' => 'region',
-        'title' => 'Top (Admin)',
+        'title' => 'Find',
         'width' => 100,
         'width_type' => '%',
         'parent' => '2',
@@ -742,10 +740,27 @@ function thurgood_feature_default_page_manager_pages() {
       ),
       'center_' => array(
         'type' => 'region',
-        'title' => 'Center',
+        'title' => 'Manage',
         'width' => 100,
         'width_type' => '%',
         'parent' => '3',
+        'class' => '',
+      ),
+      4 => array(
+        'type' => 'row',
+        'contains' => 'region',
+        'children' => array(
+          0 => 'find',
+        ),
+        'parent' => 'main',
+        'class' => '',
+      ),
+      'find' => array(
+        'type' => 'region',
+        'title' => 'Bottom',
+        'width' => 100,
+        'width_type' => '%',
+        'parent' => '4',
         'class' => '',
       ),
     ),
@@ -758,6 +773,7 @@ function thurgood_feature_default_page_manager_pages() {
       'top' => NULL,
       'top__admin_' => NULL,
       'center_' => NULL,
+      'find' => NULL,
     ),
     'middle' => array(
       'style' => 'default',
@@ -770,89 +786,6 @@ function thurgood_feature_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = 'center_';
-    $pane->type = 'block';
-    $pane->subtype = 'thurgood_custom_module-main';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-1'] = $pane;
-    $display->panels['center_'][0] = 'new-1';
-    $pane = new stdClass;
-    $pane->pid = 'new-2';
-    $pane->panel = 'top';
-    $pane->type = 'block';
-    $pane->subtype = 'thurgood_custom_module-article';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'block',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-2'] = $pane;
-    $display->panels['top'][0] = 'new-2';
-    $pane = new stdClass;
-    $pane->pid = 'new-3';
-    $pane->panel = 'top';
-    $pane->type = 'block';
-    $pane->subtype = 'thurgood_custom_module-event';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'block',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-3'] = $pane;
-    $display->panels['top'][1] = 'new-3';
-    $pane = new stdClass;
-    $pane->pid = 'new-4';
-    $pane->panel = 'top';
-    $pane->type = 'block';
-    $pane->subtype = 'thurgood_custom_module-place';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'block',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $display->content['new-4'] = $pane;
-    $display->panels['top'][2] = 'new-4';
-    $pane = new stdClass;
-    $pane->pid = 'new-5';
-    $pane->panel = 'top';
     $pane->type = 'block';
     $pane->subtype = 'thurgood_custom_module-tutorial';
     $pane->shown = TRUE;
@@ -870,11 +803,179 @@ function thurgood_feature_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['center_'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'center_';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-settings';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['center_'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'center_';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-notifications';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['center_'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'find';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-main';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-4'] = $pane;
+    $display->panels['find'][0] = 'new-4';
+    $pane = new stdClass;
+    $pane->pid = 'new-5';
+    $pane->panel = 'top';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-article';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
     $display->content['new-5'] = $pane;
-    $display->panels['top'][3] = 'new-5';
+    $display->panels['top'][0] = 'new-5';
     $pane = new stdClass;
     $pane->pid = 'new-6';
+    $pane->panel = 'top';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-event';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-6'] = $pane;
+    $display->panels['top'][1] = 'new-6';
+    $pane = new stdClass;
+    $pane->pid = 'new-7';
+    $pane->panel = 'top';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-place';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-7'] = $pane;
+    $display->panels['top'][2] = 'new-7';
+    $pane = new stdClass;
+    $pane->pid = 'new-8';
+    $pane->panel = 'top__admin_';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-place_search';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-8'] = $pane;
+    $display->panels['top__admin_'][0] = 'new-8';
+    $pane = new stdClass;
+    $pane->pid = 'new-9';
+    $pane->panel = 'top__admin_';
+    $pane->type = 'block';
+    $pane->subtype = 'thurgood_custom_module-bookmarks';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'block',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-9'] = $pane;
+    $display->panels['top__admin_'][1] = 'new-9';
+    $pane = new stdClass;
+    $pane->pid = 'new-10';
     $pane->panel = 'top__admin_';
     $pane->type = 'block';
     $pane->subtype = 'thurgood_custom_module-filter';
@@ -902,11 +1003,11 @@ function thurgood_feature_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
-    $display->content['new-6'] = $pane;
-    $display->panels['top__admin_'][0] = 'new-6';
+    $pane->position = 2;
+    $display->content['new-10'] = $pane;
+    $display->panels['top__admin_'][2] = 'new-10';
     $pane = new stdClass;
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-11';
     $pane->panel = 'top__admin_';
     $pane->type = 'block';
     $pane->subtype = 'thurgood_custom_module-workflow';
@@ -934,9 +1035,9 @@ function thurgood_feature_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $display->content['new-7'] = $pane;
-    $display->panels['top__admin_'][1] = 'new-7';
+    $pane->position = 3;
+    $display->content['new-11'] = $pane;
+    $display->panels['top__admin_'][3] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

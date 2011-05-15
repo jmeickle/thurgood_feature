@@ -20,6 +20,114 @@ function thurgood_feature_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_flag_default_flags().
+ */
+function thurgood_feature_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "My Bookmarks".
+  $flags['bookmarks'] = array(
+    'content_type' => 'node',
+    'title' => 'My Bookmarks',
+    'global' => '0',
+    'types' => array(
+      '0' => 'place',
+      '1' => 'person',
+      '2' => 'organization',
+      '3' => 'event',
+      '4' => 'article',
+    ),
+    'flag_short' => 'Add page to bookmarks',
+    'flag_long' => 'Add page to bookmarks',
+    'flag_message' => 'This page has been added to your bookmarks',
+    'unflag_short' => 'Remove page from bookmarks',
+    'unflag_long' => 'Remove page from bookmarks',
+    'unflag_message' => 'This page has been removed from your bookmarks',
+    'unflag_denied_text' => '',
+    'link_type' => 'flag_note_form',
+    'roles' => array(
+      'flag' => array(
+        '0' => 2,
+      ),
+      'unflag' => array(
+        '0' => 2,
+      ),
+    ),
+    'show_on_page' => 1,
+    'show_on_teaser' => 0,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'i18n' => 0,
+    'flag_note_title' => 'Add page to bookmarks',
+    'flag_note_fieldset' => 'Bookmark details',
+    'flag_note_label' => 'Note',
+    'flag_note_help' => 'You may add a note to describe this bookmark.',
+    'flag_note_history_disabled' => 1,
+    'flag_note_delete_unflags' => 1,
+    'flag_note_default_text' => '',
+    'flag_note_maxlength' => '0',
+    'flag_note_vocab' => '11',
+    'flag_note_vocab_label' => 'List',
+    'flag_note_vocab_help' => 'Choose which list to add this bookmark to. Private Bookmarks are only visible to you; Public Bookmarks are visible to anyone.',
+    'flag_note_hide_text' => 0,
+    'api_version' => 2,
+    'module' => 'thurgood_feature',
+    'locked' => array(
+      '0' => 'name',
+    ),
+  );
+  // Exported flag: "Incorrect Information".
+  $flags['incorrect'] = array(
+    'content_type' => 'node',
+    'title' => 'Incorrect Information',
+    'global' => '0',
+    'types' => array(
+      '0' => 'place',
+      '1' => 'person',
+      '2' => 'organization',
+      '3' => 'event',
+      '4' => 'article',
+    ),
+    'flag_short' => 'Report this page',
+    'flag_long' => 'Report this page',
+    'flag_message' => 'Thank you for reporting this page. An administrator will look into the issue.',
+    'unflag_short' => 'BUG! Please email the administrator.',
+    'unflag_long' => 'BUG! Please email the administrator.',
+    'unflag_message' => 'BUG! Please email the administrator.',
+    'unflag_denied_text' => 'Thank you for reporting this page. An administrator will look into the issue.',
+    'link_type' => 'flag_note_form',
+    'roles' => array(
+      'flag' => array(
+        '0' => 2,
+      ),
+      'unflag' => array(),
+    ),
+    'show_on_page' => 1,
+    'show_on_teaser' => 0,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'i18n' => 0,
+    'flag_note_title' => 'Report this page',
+    'flag_note_fieldset' => 'Report details',
+    'flag_note_label' => 'Note',
+    'flag_note_help' => 'You may add a note to describe your reason in more detail.',
+    'flag_note_history_disabled' => 1,
+    'flag_note_delete_unflags' => 1,
+    'flag_note_default_text' => '',
+    'flag_note_maxlength' => '0',
+    'flag_note_vocab' => '12',
+    'flag_note_vocab_label' => 'Reason',
+    'flag_note_vocab_help' => 'Choose the reason why you reported this page.',
+    'flag_note_hide_text' => 0,
+    'api_version' => 2,
+    'module' => 'thurgood_feature',
+    'locked' => array(
+      '0' => 'name',
+    ),
+  );
+  return $flags;
+}
+
+/**
  * Implementation of hook_imagecache_default_presets().
  */
 function thurgood_feature_imagecache_default_presets() {

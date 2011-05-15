@@ -149,6 +149,51 @@ function thurgood_feature_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'thurgood_sidebar_node';
+  $context->description = 'Thurgood: Sidebar (Any Node)';
+  $context->tag = 'thurgood';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'article' => 'article',
+        'event' => 'event',
+        'organization' => 'organization',
+        'person' => 'person',
+        'place' => 'place',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+    'user' => array(
+      'values' => array(
+        'authenticated user' => 'authenticated user',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'thurgood_custom_module-actions' => array(
+          'module' => 'thurgood_custom_module',
+          'delta' => 'actions',
+          'region' => 'right',
+          'weight' => 0,
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Thurgood: Sidebar (Any Node)');
+  t('thurgood');
+
+  $export['thurgood_sidebar_node'] = $context;
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'thurgood_sidebar_organization';
   $context->description = 'Thurgood: Organization View Sidebar.';
   $context->tag = 'thurgood';
